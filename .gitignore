@@ -12,7 +12,4 @@ dados/
 key/
 
 # Ignorar notebooks específicos
-Machine Learning Regressao.ipynb
-consult_nlp_main.ipynb
-consult_unsupervised.ipynb
 tests.ipynb
