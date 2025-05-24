@@ -9,16 +9,20 @@ Este é um projeto de Machine Learning desenvolvido com Flask e Visual Studio Co
 ## 🚀 Funcionalidades
 
 - **Autenticação Básica**: Protege rotas sensíveis usando autenticação HTTP básica.
-- **Web Scraping**: Extrai o csv de 2024 e 2025 sobre acidentes da página web https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-acidentes
-- **Dados Abertos**: Expõe dados provenientes da extração do download de arquivos no formato csv.
+- **Web Scraping**: Extrai o csv da página web https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-acidentes contendo registro de acidentes de 2024 e 2025.
+- **Dados Abertos**: Portal do Governo para exposição de dados dos mais diversos segmentos relacionados a gestão pública.
 - **Cache e Documentação**: Implementa cache para otimização e documentação automática com Swagger.
 
 ## 📁 Estrutura do Projeto
 
 ```bash
-techfase1/
+techfase3/
 ├── app/
 │   ├── __init__.py
+│   ├── csv/
+│   ├── data/
+│   │   ├── __init__.py
+│   │   ├── dadosabertosprf.py
 │   ├── routes/
 │   │   ├── __init__.py
 │   │   ├── auth.py
