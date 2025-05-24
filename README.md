@@ -1,16 +1,16 @@
 # Embrapa
 
-Este é um projeto de API desenvolvido com Flask, que inclui web scraping em páginas do dominio http://vitibrasil.cnpuv.embrapa.br/ e autenticação básica.
+Este é um projeto de API desenvolvido com Flask, que inclui web scraping https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-acidentes e autenticação básica.
 
 ## Link video
 
-https://drive.google.com/file/d/1kI1DZXqvbvSgiWLqt8x2JfOiQ-eMeRmE/view?usp=sharing
+
 
 ## 🚀 Funcionalidades
 
 - **Autenticação Básica**: Protege rotas sensíveis usando autenticação HTTP básica.
-- **Web Scraping**: Extrai dados de páginas web http://vitibrasil.cnpuv.embrapa.br/ (label, table, tbody, tr, td) usando BeautifulSoup.
-- **API Embrapa**: Expõe dados provenientes da extração da pagina web vitibrasil em formato JSON.
+- **Web Scraping**: Extrai o csv de 2024 e 2025 sobre acidentes da página web [http://vitibrasil.cnpuv.embrapa.br/ (label, table, tbody, tr, td) usando BeautifulSoup](https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-acidentes)
+- **Dados Abertos**: Expõe dados provenientes da extração do download de arquivos no formato csv.
 - **Cache e Documentação**: Implementa cache para otimização e documentação automática com Swagger.
 
 ## 📁 Estrutura do Projeto
@@ -19,13 +19,6 @@ https://drive.google.com/file/d/1kI1DZXqvbvSgiWLqt8x2JfOiQ-eMeRmE/view?usp=shari
 techfase1/
 ├── app/
 │   ├── __init__.py
-│   ├── data/
-│   │   ├── __init__.py
-│   │   ├── comercializacao.py
-│   │   ├── exportacao.py
-│   │   └── importacao.py
-│   │   └── processamento.py
-│   │   └── producao.py
 │   ├── routes/
 │   │   ├── __init__.py
 │   │   ├── auth.py
@@ -33,22 +26,21 @@ techfase1/
 │   ├── utils/
 │   │   ├── __init__.py
 │   │   └── auth.py
-│   │   ├── linksviti.py
+│   │   ├── links.py
 │   └── config.py
 ├── requirements.txt
 ├── README.md
 └── run.py
+└── scrape_detratan.py
 ```
 
 - **`app/`**: Diretório principal do aplicativo.
-  - **`data/`**: Classes para lógica de negócios para scrapping das informações (comercializacao, exportacao, importacao, processamento, produção) do site da embrapa.
-  - **`routes/`**: Contém as rotas organizadas por acesso aos dados no site da embrapa. 
+  - **`routes/`**: Contém as rotas organizadas por acesso aos dados no site de dados abertos da PRF. 
                    As rotas não recebem argumentos uma vez que o método captura todas as datas disponíveis no site para consulta.
   - **`utils/`**: Utilitários, como autenticação.
   - **`config.py`**: Configurações da aplicação Flask.
 - **`run.py`**: Ponto de entrada para iniciar o aplicativo.
 - **`requirements.txt`**: Lista de dependências do projeto.
-- **`Dockerfile`**: Configurações para Docker.
 - **`README.md`**: Documentação do projeto.
 
 ## 🛠️ Como Executar o Projeto
@@ -56,8 +48,8 @@ techfase1/
 ### 1. Clone o Repositório
 
 ```bash
-git clone https://github.com/nat-lima/techfase1
-cd techfase1
+git clone https://github.com/nat-lima/techfase3
+cd techfase3
 ```
 
 ### 2. Crie um Ambiente Virtual
@@ -83,44 +75,10 @@ O aplicativo estará disponível em `http://localhost:5000` ou `http://127.0.0.1
 
 Acesse a aplicação em `http://localhost:5000`.
 
-### 5. Deploy na Vercel
+### 5. Arquitetura
 
-Instale o Node.js.
 
-Crie uma conta na Vercel em https://vercel.com/.
 
-Instale no VSCode a extensão da Vercel oficial.
-
-Criar arquivo vercel.json:
-```bash
-{
-    "version": 2,
-    "builds": [
-      {
-        "src": "run.py",
-        "use": "@vercel/python"
-      }
-    ],
-    "routes": [
-      { "src": "/(.*)", "dest": "run.py" }
-    ]
-  }
-```
-Rode no terminal:
-
-```bash
-npm i -g vercel
-vercel
-vercel --prod
-```
-
-Link vercel: https://techfase1-angn7okrl-vivianas-projects-ee28f91d.vercel.app/
-
-Link vercel doc api: https://techfase1-angn7okrl-vivianas-projects-ee28f91d.vercel.app/apidocs/
-
-### 6. Arquitetura
-
-![Arquitetura](https://github.com/user-attachments/assets/1c9cb1fc-33f2-4c07-8d13-ae595bf406e9)
 
 ## 📖 Documentação da API
 
