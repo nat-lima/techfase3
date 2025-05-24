@@ -7,6 +7,10 @@ A saber, O Portal Brasileiro de Dados Abertos é a ferramenta disponibilizada pe
 ## Link video
 
 
+## Arquitetura
+
+![image](https://github.com/user-attachments/assets/27abcade-7dec-47f8-8d49-36262dcc6177)
+
 
 ## 🚀 Funcionalidades
 
@@ -83,11 +87,6 @@ python run.py
 O aplicativo estará disponível em `http://localhost:5000` ou `http://127.0.0.1:5000`
 
 Acesse a aplicação em `http://localhost:5000`.
-
-### 5. Arquitetura
-
-
-
 
 ## 📖 Documentação da API
 
