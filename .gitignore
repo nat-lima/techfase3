@@ -13,3 +13,6 @@ key/
 
 # Ignorar notebooks específicos
 tests.ipynb
+
+# Ignorar requirements.txt
+requirements.txt
