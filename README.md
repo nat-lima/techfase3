@@ -9,7 +9,7 @@ Este é um projeto de API desenvolvido com Flask, que inclui web scraping https:
 ## 🚀 Funcionalidades
 
 - **Autenticação Básica**: Protege rotas sensíveis usando autenticação HTTP básica.
-- **Web Scraping**: Extrai o csv de 2024 e 2025 sobre acidentes da página web [http://vitibrasil.cnpuv.embrapa.br/ (label, table, tbody, tr, td) usando BeautifulSoup](https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-acidentes)
+- **Web Scraping**: Extrai o csv de 2024 e 2025 sobre acidentes da página web https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-acidentes
 - **Dados Abertos**: Expõe dados provenientes da extração do download de arquivos no formato csv.
 - **Cache e Documentação**: Implementa cache para otimização e documentação automática com Swagger.
 
