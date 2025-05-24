@@ -1,6 +1,6 @@
 # Dados Abertos PRF
 
-Este é um projeto de API desenvolvido com Flask, que inclui web scraping https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-acidentes e autenticação básica.
+Este é um projeto de Machine Learning desenvolvido com Flask e Visual Studio Code, que inclui web scraping https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-acidentes e autenticação básica.
 
 ## Link video
 
