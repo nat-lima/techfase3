@@ -9,7 +9,8 @@ A saber, O Portal Brasileiro de Dados Abertos é a ferramenta disponibilizada pe
 
 ## Arquitetura
 
-![image](https://github.com/user-attachments/assets/27abcade-7dec-47f8-8d49-36262dcc6177)
+![image](https://github.com/user-attachments/assets/c7513ab8-dfd5-45ed-8940-c17c5ee2066b)
+
 
 
 ## 🚀 Funcionalidades
