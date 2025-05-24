@@ -23,7 +23,8 @@ techfase3/
 │   ├── data/
 │   │   ├── __init__.py
 │   │   ├── dadosabertosprf.py
-│   ├── routes/
+│   ├── key/
+│   ├── route/
 │   │   ├── __init__.py
 │   │   ├── auth.py
 │   │   └── scrape.py
@@ -39,9 +40,11 @@ techfase3/
 ```
 
 - **`app/`**: Diretório principal do aplicativo.
-  - **`routes/`**: Contém as rotas organizadas por acesso aos dados no site de dados abertos da PRF. 
-                   As rotas não recebem argumentos uma vez que o método captura todas as datas disponíveis no site para consulta.
-  - **`utils/`**: Utilitários, como autenticação.
+  - **`csv/`**: Após captura dos arquivos apartir do site dados abertos do governo, os arquivos são salvos nessa estrutura.
+  - **`data/`**: estrutura para leitura dos dados e persistência em base de dados remota.
+  - **`key/`**: key do cloud firestore onde a coleção foi criada. 
+  - **`routes/`**: Contém a rota responsável por invocar o processamento dos dados provenientes do site dados abertos.
+  - **`utils/`**: Utilitários, como autenticação e links no site.
   - **`config.py`**: Configurações da aplicação Flask.
 - **`run.py`**: Ponto de entrada para iniciar o aplicativo.
 - **`requirements.txt`**: Lista de dependências do projeto.
