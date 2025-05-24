@@ -16,8 +16,9 @@ A saber, O Portal Brasileiro de Dados Abertos é a ferramenta disponibilizada pe
 
 - **Autenticação Básica**: Protege rotas sensíveis usando autenticação HTTP básica.
 - **Web Scraping**: Extrai o csv da página web https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-acidentes contendo registro de acidentes de 2024 e 2025.
-- **Dados Abertos**: Portal do Governo para exposição de dados dos mais diversos segmentos relacionados a gestão pública.
+- **Mineração, análise exploratória e outras análises**: VIVI PODE COMPLETAR.
 - **Cache e Documentação**: Implementa cache para otimização e documentação automática com Swagger.
+- **Apresentação dos Dados**: VIVI PODE COMPLETAR.
 
 ## 📁 Estrutura do Projeto
 
