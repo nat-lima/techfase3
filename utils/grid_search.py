@@ -37,7 +37,7 @@ def grid_search(df_final):
     lda = LatentDirichletAllocation(random_state=42)
 
     # Set up do grid search
-    grid_search = GridSearchCV(lda, param_grid=param_grid, cv=3, n_jobs=1, verbose=2)
+    grid_search = GridSearchCV(lda, param_grid=param_grid, cv=2, n_jobs=1, verbose=2)
 
     # Fit do grid search na matrix de treino
     grid_search.fit(train_matrix)
@@ -78,7 +78,7 @@ def grid_search(df_final):
     corpus = [dictionary.doc2bow(text) for text in texts]
 
     # Fit do modelo LDA usando gensim
-    lda_model = gensim.models.LdaModel(corpus, num_topics=best_params['n_components'], id2word=dictionary, passes=5)
+    lda_model = gensim.models.LdaModel(corpus, num_topics=best_params['n_components'], id2word=dictionary, passes=4)
 
     # Cálculo coherence score
     coherence_model_lda = CoherenceModel(model=lda_model, texts=texts, dictionary=dictionary, coherence='c_v')
