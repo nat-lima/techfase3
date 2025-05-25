@@ -6,20 +6,20 @@ A saber, O Portal Brasileiro de Dados Abertos é a ferramenta disponibilizada pe
 
 ## Link video
 
+https://drive.google.com/file/d/1cG5NIg3HIAygibd92G8mwSxrQz7wMYcO/view?usp=sharing
 
 ## Arquitetura
 
 ![image](https://github.com/user-attachments/assets/c7513ab8-dfd5-45ed-8940-c17c5ee2066b)
 
 
-
 ## 🚀 Funcionalidades
 
 - **Autenticação Básica**: Protege rotas sensíveis usando autenticação HTTP básica.
 - **Web Scraping**: Extrai o csv da página web https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-acidentes contendo registro de acidentes de 2024 e 2025.
-- **Mineração, análise exploratória e outras análises**: VIVI PODE COMPLETAR.
+- **Mineração, análise exploratória e outras análises**: Desenvolvimento utilizando VScode, Notebook Jubyter, Pandas, Firebase Admin, Nupy, matplotlib e seaborn.
 - **Cache e Documentação**: Implementa cache para otimização e documentação automática com Swagger.
-- **Apresentação dos Dados**: VIVI PODE COMPLETAR.
+- **Apresentação dos Dados**: PowerBI (https://app.powerbi.com/groups/me/reports/cd22ec7c-7e34-4af8-a141-ac4fa8a34b8a/434fe304679f8fc8be24?ctid=11dbbfe2-89b8-4549-be10-cec364e59551&experience=power-bi) requer registro de usuário no portal.
 
 ## 📁 Estrutura do Projeto
 
@@ -41,6 +41,12 @@ techfase3/
 │   │   └── auth.py
 │   │   ├── links.py
 │   └── config.py
+├── 1 Projeto EDA.ipynb
+├── 2 Machine Learning Classificacao.ipynb
+├── 3 LDA para topic model.ipynb
+├── util/
+│   └── grid_search.py
+├── resultados/
 ├── requirements.txt
 ├── README.md
 └── run.py
@@ -54,6 +60,13 @@ techfase3/
   - **`routes/`**: Contém a rota responsável por invocar o processamento dos dados provenientes do site dados abertos.
   - **`utils/`**: Utilitários, como autenticação e links no site.
   - **`config.py`**: Configurações da aplicação Flask.
+- **`1 Projeto EDA.ipynb**: Análise exploratória dos dados.
+- **` 2 Machine Learning Classificacao.ipynb**: Modelo de classificação.
+- **`3 LDA para topic model.ipynb**:  Modelo não supervisionado de modelagem de tópicos
+- **`util/**:
+-   - **`grid_search.py`**: Grid Search para o LDA.
+- **`dados/**: Em caso de estouro da quota do firebase, é possível utilizar o csv original do site apartir dessa pasta. 
+- **`resultados/**: Contém o modelo PKL, CSV para o dashboard e Dashboard.
 - **`run.py`**: Ponto de entrada para iniciar o aplicativo.
 - **`requirements.txt`**: Lista de dependências do projeto.
 - **`README.md`**: Documentação do projeto.
@@ -82,13 +95,19 @@ pip install -r requirements.txt
 
 ### 4. Execute o Aplicativo
 
+API - Para baixa e persistencia dos dados abertos PRF 
+O aplicativo estará disponível em `http://localhost:5000` ou `http://127.0.0.1:5000`
 ```bash
 python run.py
 ```
 
-O aplicativo estará disponível em `http://localhost:5000` ou `http://127.0.0.1:5000`
-
-Acesse a aplicação em `http://localhost:5000`.
+Modelos ML - Faz-se necessário executar o notebook abaixo:
+```bash
+1 Projeto EDA.ipynb
+```
+### 5. Chave para acesso ao Cloud Firestore
+https://drive.google.com/drive/u/0/folders/1xNLDnPaPQGgXunZYPvIJ9tO1uOFNWHIh
+Também disponível em: techfase3/app/key
 
 ## 📖 Documentação da API
 
