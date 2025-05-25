@@ -27,7 +27,6 @@ https://drive.google.com/file/d/1cG5NIg3HIAygibd92G8mwSxrQz7wMYcO/view?usp=shari
 techfase3/
 ├── app/
 │   ├── __init__.py
-│   ├── csv/
 │   ├── data/
 │   │   ├── __init__.py
 │   │   ├── dadosabertosprf.py
@@ -46,6 +45,7 @@ techfase3/
 ├── 3 LDA para topic model.ipynb
 ├── util/
 │   └── grid_search.py
+├── dados/
 ├── resultados/
 ├── requirements.txt
 ├── README.md
@@ -56,7 +56,7 @@ techfase3/
 - **`app/`**: Diretório principal do aplicativo.
   - **`csv/`**: Após captura dos arquivos apartir do site dados abertos do governo, os arquivos são salvos nessa estrutura.
   - **`data/`**: estrutura para leitura dos dados e persistência em base de dados remota.
-  - **`key/`**: key do cloud firestore onde a coleção foi criada. 
+  - **`key/`**: key do cloud firestore onde a coleção foi criada. Pode ser que por politicas de compartilhamento do IAM, o acesso seja perdido. Nesse caso, solicitamos que nos contatem.
   - **`routes/`**: Contém a rota responsável por invocar o processamento dos dados provenientes do site dados abertos.
   - **`utils/`**: Utilitários, como autenticação e links no site.
   - **`config.py`**: Configurações da aplicação Flask.
@@ -65,7 +65,7 @@ techfase3/
 - **`3 LDA para topic model.ipynb`**:  Modelo não supervisionado de modelagem de tópicos
 - **`util/`**:
 -   - **`grid_search.py`**: Grid Search para o LDA.
-- **`dados/`**: Em caso de estouro da quota do firebase, é possível utilizar o csv original do site apartir dessa pasta. 
+- **`dados/`**: Os arquivos baixados do site dados abertos são depositados nesse diretório, e em caso de estouro da quota do firebase, é possível utilizar o csv original do site apartir dessa pasta. 
 - **`resultados/`**: Contém o modelo PKL, CSV para o dashboard e Dashboard.
 - **`run.py`**: Ponto de entrada para iniciar o aplicativo.
 - **`requirements.txt`**: Lista de dependências do projeto.
