@@ -4,7 +4,7 @@ import zipfile
 import pandas as pd
 import numpy as np
 import time
-from app.utils.links import url_dadosabertos_prf_2025,url_dadosabertos_prf_2024, url_dadosabertos_prf_2023
+from app.utils.links import url_dadosabertos_prf_2025,url_dadosabertos_prf_2024
 import firebase_admin # type: ignore
 from firebase_admin import credentials # type: ignore
 from firebase_admin import firestore # type: ignore
