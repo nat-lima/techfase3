@@ -60,13 +60,13 @@ techfase3/
   - **`routes/`**: Contém a rota responsável por invocar o processamento dos dados provenientes do site dados abertos.
   - **`utils/`**: Utilitários, como autenticação e links no site.
   - **`config.py`**: Configurações da aplicação Flask.
-- **`1 Projeto EDA.ipynb**: Análise exploratória dos dados.
-- **` 2 Machine Learning Classificacao.ipynb**: Modelo de classificação.
-- **`3 LDA para topic model.ipynb**:  Modelo não supervisionado de modelagem de tópicos
-- **`util/**:
+- **`1 Projeto EDA.ipynb`**: Análise exploratória dos dados.
+- **` 2 Machine Learning Classificacao.ipynb`**: Modelo de classificação.
+- **`3 LDA para topic model.ipynb`**:  Modelo não supervisionado de modelagem de tópicos
+- **`util/`**:
 -   - **`grid_search.py`**: Grid Search para o LDA.
-- **`dados/**: Em caso de estouro da quota do firebase, é possível utilizar o csv original do site apartir dessa pasta. 
-- **`resultados/**: Contém o modelo PKL, CSV para o dashboard e Dashboard.
+- **`dados/`**: Em caso de estouro da quota do firebase, é possível utilizar o csv original do site apartir dessa pasta. 
+- **`resultados/`**: Contém o modelo PKL, CSV para o dashboard e Dashboard.
 - **`run.py`**: Ponto de entrada para iniciar o aplicativo.
 - **`requirements.txt`**: Lista de dependências do projeto.
 - **`README.md`**: Documentação do projeto.
